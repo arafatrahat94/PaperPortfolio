@@ -2,21 +2,28 @@
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
 import { useTheme } from "next-themes";
 import { useEffect, useRef, useState } from "react";
-// import darklogo from "../../../Assets/logo/darklogo.svg";
-// import logo from "../../../Assets/logo/logo.svg";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import "./Nav.css";
+
 const Navbar = () => {
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const divRef = useRef<HTMLDivElement>(null);
-  const { setTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
 
+  // Initialize theme based on localStorage only on the client side
   useEffect(() => {
-    if (!isOpen && !isOpen2) {
-      return;
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      setTheme(savedTheme);
     }
+  }, [setTheme]);
+
+  // Handle click outside to close the menu
+  useEffect(() => {
+    if (!isOpen && !isOpen2) return;
+
     const handleClickOutside = (event: MouseEvent) => {
       if (divRef.current && !divRef.current.contains(event.target as Node)) {
         setIsOpen(false);
@@ -26,23 +33,21 @@ const Navbar = () => {
       }
     };
 
-    // Bind the event listener
     document.addEventListener("mousedown", handleClickOutside);
 
     return () => {
-      // Unbind the event listener on clean up
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, [divRef, isOpen, isOpen2]);
-  useEffect(() => {
-    if (localStorage?.getItem("theme") !== undefined) {
-      localStorage?.getItem("theme") === "dark"
-        ? setTheme("dark")
-        : setTheme("light");
-    }
-  }, []);
+  }, [isOpen, isOpen2]);
+
+  const handleThemeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newTheme = e.target.checked ? "dark" : "light";
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
-    <div className="flex  relative bg-black-100 justify-between w-full items-center overflow-hidden mx-auto  sm:p-5 p-5 h-[75px] ">
+    <div className="flex relative bg-black-100 justify-between w-full items-center overflow-hidden mx-auto sm:p-5 p-5 h-[75px] ">
       {/*-> Rahat code */}
       <div className="max-md:scale-90 dark:hidden max-md:-ms-4">
         {/* <Image
@@ -62,7 +67,7 @@ const Navbar = () => {
           height={500}
         /> */}
       </div>
-      <div className=" max-xl:hidden  gap-x-10 justify-between flex items-center h-full">
+      <div className=" max-xl:hidden gap-x-10 justify-between flex items-center h-full">
         <CustomButton className={"text-xl"} path="/">
           Hello
         </CustomButton>
@@ -92,15 +97,10 @@ const Navbar = () => {
               </svg>
             </span>
             <input
-              onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
+              onChange={handleThemeChange}
               type="checkbox"
               className="input"
-              checked={
-                localStorage?.getItem("theme") !== undefined &&
-                localStorage?.getItem("theme") === "dark"
-                  ? true
-                  : false
-              }
+              checked={resolvedTheme === "dark"}
             />
             <span className="slider"></span>
           </label>
@@ -108,7 +108,7 @@ const Navbar = () => {
 
         <button
           className={
-            "border-2 py-1 xl:py-1.5  px-6  xl:text-lg hover:bg-light-primary-color dark:hover:bg-dark-primary-color dark:hover:text-light-primary-color dark:border-dark-primary-color  dark:text-dark-primary-color hover:text-dark-primary-color transform duration-300 rounded text-light-primary-color border-light-primary-color"
+            "border-2 py-1 xl:py-1.5 px-6 xl:text-lg hover:bg-light-primary-color dark:hover:bg-dark-primary-color dark:hover:text-light-primary-color dark:border-dark-primary-color dark:text-dark-primary-color hover:text-dark-primary-color transform duration-300 rounded text-light-primary-color border-light-primary-color"
           }
         >
           Contact
@@ -133,7 +133,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
       <div
         className={`${
           isOpen2 ? "h-screen w-screen opacity-100 " : "opacity-0"
@@ -143,14 +142,13 @@ const Navbar = () => {
           ref={divRef}
           className={`${
             isOpen ? "top-0" : "-top-[120%]"
-          } absolute transform duration-700 bg-background w-full border-s-2 p-4 border-[#575757]  h-full`}
+          } absolute transform duration-700 bg-background w-full border-s-2 p-4 border-[#575757] h-full`}
         >
-          <div className="w-full flex justify-center z-50  min-h-screen flex-col h-full ">
+          <div className="w-full flex justify-center z-50 min-h-screen flex-col h-full ">
             <div
               role="button"
               className="xl:hidden absolute z-50 top-5 right-0 left-0 w-full flex items-center justify-between"
             >
-              {" "}
               <label className="switch scale-125">
                 <span className="sun">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -166,14 +164,10 @@ const Navbar = () => {
                   </svg>
                 </span>
                 <input
-                  onChange={(e) =>
-                    setTheme(e.target.checked ? "dark" : "light")
-                  }
+                  onChange={handleThemeChange}
                   type="checkbox"
-                  checked={
-                    localStorage?.getItem("theme") === "dark" ? true : false
-                  }
                   className="input"
+                  checked={resolvedTheme === "dark"}
                 />
                 <span className="slider"></span>
               </label>
@@ -195,7 +189,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="h-[500px]  z-50 relative flex flex-col">
+            <div className="h-[500px] z-50 relative flex flex-col">
               <CustomButton className={"text-3xl "} path="/">
                 Hello
               </CustomButton>
@@ -209,7 +203,7 @@ const Navbar = () => {
                 Projects
               </CustomButton>
             </div>
-            <div className="h-[60px]  flex justify-center items-center mt-10 gap-x-7">
+            <div className="h-[60px] flex justify-center items-center mt-10 gap-x-7">
               <div className=" text-5xl w-[55px] hover:scale-110 transform duration-500 h-[55px] text-light-primary-color dark:text-dark-primary-color rounded">
                 <FaGithub />
               </div>
