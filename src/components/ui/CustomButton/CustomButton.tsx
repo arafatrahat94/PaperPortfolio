@@ -3,7 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import "./CustomButton.css";
 const CustomButton = ({ children, className, path }: any) => {
-  const classes = " lg:px-10   transform duration-500";
+  const classes = " lg:px-10  uppercase transform duration-500";
   const pathName = usePathname();
   return (
     <Link

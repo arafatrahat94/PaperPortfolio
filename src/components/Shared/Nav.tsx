@@ -108,7 +108,7 @@ const Navbar = () => {
 
         <button
           className={
-            "border-2 py-1 xl:py-1.5 px-6 xl:text-lg hover:bg-light-primary-color dark:hover:bg-dark-primary-color dark:hover:text-light-primary-color dark:border-dark-primary-color dark:text-dark-primary-color hover:text-dark-primary-color transform duration-300 rounded text-light-primary-color border-light-primary-color"
+            "border-2 py-1 xl:py-1.5 px-6 xl:text-lg hover:bg-light-primary-color dark:hover:bg-dark-primary-color dark:hover:text-light-primary-color dark:border-dark-primary-color dark:text-dark-primary-color hover:text-dark-primary-color transform duration-300 rounded font-Space uppercase text-light-primary-color border-light-primary-color"
           }
         >
           Contact
@@ -142,14 +142,14 @@ const Navbar = () => {
           ref={divRef}
           className={`${
             isOpen ? "top-0" : "-top-[120%]"
-          } absolute transform duration-700 bg-background w-full border-s-2 p-4 border-[#575757] h-full`}
+          } absolute transform duration-700 bg-background w-full border-s-2  p-4 border-[#575757] h-full`}
         >
           <div className="w-full flex justify-center z-50 min-h-screen flex-col h-full ">
             <div
               role="button"
-              className="xl:hidden absolute z-50 top-5 right-0 left-0 w-full flex items-center justify-between"
+              className="xl:hidden px-4 absolute z-50 top-5 right-0 left-0 w-full flex items-center justify-between"
             >
-              <label className="switch scale-125">
+              <label className="switch scale-[200%]">
                 <span className="sun">
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <g className="fill-black dark:fill-white">
@@ -189,7 +189,7 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="h-[500px] z-50 relative flex flex-col">
+            <div className="h-[500px] mt-10 z-50 relative flex flex-col">
               <CustomButton className={"text-3xl "} path="/">
                 Hello
               </CustomButton>
