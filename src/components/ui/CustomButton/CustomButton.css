@@ -1,0 +1,39 @@
+.btn {
+  cursor: pointer;
+  position: relative;
+
+  @apply h-full flex items-center justify-center overflow-hidden;
+}
+
+.btn span {
+  /* text-transform: uppercase; */
+  letter-spacing: 1px;
+  transition: top 0.5s;
+}
+
+.btn-text-one {
+  position: absolute;
+  width: 100%;
+  top: 20%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  @apply flex justify-center;
+}
+
+.btn-text-two {
+  position: absolute;
+  width: 100%;
+  top: 150%;
+  left: 0;
+  @apply flex justify-center;
+  /* transform: translateY(-50%); */
+}
+
+.btn:hover .btn-text-one {
+  top: -100%;
+}
+
+.btn:hover .btn-text-two {
+  top: 20%;
+}
