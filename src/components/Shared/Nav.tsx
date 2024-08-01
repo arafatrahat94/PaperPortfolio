@@ -35,9 +35,11 @@ const Navbar = () => {
     };
   }, [divRef, isOpen, isOpen2]);
   useEffect(() => {
-    localStorage.getItem("theme") === "dark"
-      ? setTheme("dark")
-      : setTheme("light");
+    if (localStorage?.getItem("theme") !== undefined) {
+      localStorage?.getItem("theme") === "dark"
+        ? setTheme("dark")
+        : setTheme("light");
+    }
   }, []);
   return (
     <div className="flex  relative bg-black-100 justify-between w-full items-center overflow-hidden mx-auto  sm:p-5 p-5 h-[75px] ">
@@ -93,7 +95,12 @@ const Navbar = () => {
               onChange={(e) => setTheme(e.target.checked ? "dark" : "light")}
               type="checkbox"
               className="input"
-              checked={localStorage.getItem("theme") === "dark" ? true : false}
+              checked={
+                localStorage?.getItem("theme") !== undefined &&
+                localStorage?.getItem("theme") === "dark"
+                  ? true
+                  : false
+              }
             />
             <span className="slider"></span>
           </label>
@@ -164,7 +171,7 @@ const Navbar = () => {
                   }
                   type="checkbox"
                   checked={
-                    localStorage.getItem("theme") === "dark" ? true : false
+                    localStorage?.getItem("theme") === "dark" ? true : false
                   }
                   className="input"
                 />
