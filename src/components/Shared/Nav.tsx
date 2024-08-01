@@ -117,12 +117,12 @@ const Navbar = () => {
         }}
         className="xl:hidden"
       >
-        <div class="switch2">
+        <div className="switch2">
           <input checked={isOpen} type="checkbox" />
           <div>
-            <span class="line-1"></span>
-            <span class="line-2"></span>
-            <span class="line-3"></span>
+            <span className="line-1"></span>
+            <span className="line-2"></span>
+            <span className="line-3"></span>
           </div>
         </div>
       </div>
@@ -177,13 +177,13 @@ const Navbar = () => {
                     setIsOpen2(!isOpen2);
                   }, 400);
                 }}
-                class="switch2"
+                className="switch2"
               >
                 <input checked={isOpen} type="checkbox" />
                 <div>
-                  <span class="line-1"></span>
-                  <span class="line-2"></span>
-                  <span class="line-3"></span>
+                  <span className="line-1"></span>
+                  <span className="line-2"></span>
+                  <span className="line-3"></span>
                 </div>
               </div>
             </div>
