@@ -1,11 +1,13 @@
 "use client";
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
+import darklogo from "../../assets/dark.png";
+import logo from "../../assets/light.png";
 import "./Nav.css";
-
 const Navbar = () => {
   const [isOpen2, setIsOpen2] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -49,23 +51,33 @@ const Navbar = () => {
   return (
     <div className="flex relative bg-black-100 justify-between w-full items-center overflow-hidden mx-auto sm:p-5 p-5 h-[75px] ">
       {/*-> Rahat code */}
-      <div className="max-md:scale-90 dark:hidden max-md:-ms-4">
-        {/* <Image
-          src={"logo"}
-          className="h-[90px] w-fit"
+      <div className="max-md:scale-90  flex dark:hidden max-md:-ms-4">
+        <Image
+          src={logo}
+          className="h-[60px] w-fit"
           alt="logo"
           width={500}
           height={500}
-        /> */}
+        />
+        <h1 className="relative bg-red-500  text-3xl">
+          <span className="bottom-0 absolute h-fit dark:text-dark-primary-color text-light-primary-color ">
+            Arafath
+          </span>
+        </h1>
       </div>
-      <div className="max-md:scale-90 dark:block hidden max-md:-ms-4">
-        {/* <Image
-          src={"darklogo"}
-          className="h-[90px] w-fit"
+      <div className="max-md:scale-90  dark:flex hidden max-md:-ms-4">
+        <Image
+          src={darklogo}
+          className="h-[60px] w-fit"
           alt="logo"
           width={500}
           height={500}
-        /> */}
+        />
+        <h1 className="relative bg-red-500  text-3xl">
+          <span className="bottom-0 absolute h-fit dark:text-dark-primary-color text-light-primary-color ">
+            Arafath
+          </span>
+        </h1>
       </div>
       <div className=" max-xl:hidden gap-x-10 justify-between flex items-center h-full">
         <CustomButton className={"text-xl"} path="/">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   FaFacebookF,
   FaGithub,
@@ -8,7 +9,7 @@ import {
 import { LuMailPlus } from "react-icons/lu";
 import { TbBorderCornerSquare } from "react-icons/tb";
 import { VscCallOutgoing } from "react-icons/vsc";
-
+import hero from "../../../assets/svg/Hero.svg";
 import "./Hero.css";
 const Hero = () => {
   return (
@@ -73,11 +74,16 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="flex max-lg:my-10 max-lg:flex-col justify-center items-center w-full">
-          <img
-            className="p-1 lg:mt-10 flex-grow w-full"
-            src="https://via.placeholder.com/480x540"
+        <div className="flex max-lg:my-10 max-lg:flex-col justify-center max-sm:-mt-5 items-center w-full">
+          <Image
+            className="p-1 mt-10 flex-grow hero w-full"
+            src={hero}
+            alt=""
+            width={500}
+            height={500}
+            loading="lazy"
           />
+
           <div className="bg-light-primary-color dark:bg-dark-primary-color   max-xl:absolute block max-lg:block lg:hidden max-lg:static lg:w-[100px] lg:h-[450px] max-md:w-full max-md:h-[80px] xl:h-[100px] right-0 xl:w-[80%] max-lg:h-[100px] max-lg:w-[80%] ms-auto p-4  mt-5">
             <div className="w-full h-full dark:border-light-primary-color/30 border-dark-primary-color/30 border max-lg:grid-cols-7 grid relative xl:grid-cols-7">
               <TbBorderCornerSquare className="absolute text-white text-xl -top-1   dark:text-light-primary-color -left-1" />

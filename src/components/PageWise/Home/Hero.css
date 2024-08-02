@@ -7,3 +7,10 @@
   -webkit-text-stroke: 1px #efebeb;
   -webkit-text-fill-color: transparent;
 }
+
+.hero {
+  filter: drop-shadow(0 5px 10px #18181884);
+}
+.dark .hero {
+  filter: drop-shadow(0 5px 10px #efebeb30);
+}
