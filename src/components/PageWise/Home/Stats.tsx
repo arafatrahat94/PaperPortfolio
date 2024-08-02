@@ -13,7 +13,7 @@ const Stats = () => {
             <img
               src="https://github-profile-cards-nemo.vercel.app/api/cards/stats?username=arafatrahat94&amp;theme=thenemo"
               alt="GitHub Contribution"
-              class="mx-auto w-full lg:w-[100%] h-full"
+              className="mx-auto w-full lg:w-[100%] h-full"
             />
           </a>
           <a
