@@ -1,6 +1,7 @@
 "use client";
 
 import Hero from "@/components/PageWise/Home/Hero";
+import HireMe from "@/components/PageWise/Home/HireMe";
 import Services from "@/components/PageWise/Home/Services";
 import MySkills from "@/components/PageWise/Home/Skills";
 import Stats from "@/components/PageWise/Home/Stats";
@@ -14,6 +15,7 @@ export default function Home() {
           <Services />
           <MySkills />
           <Stats />
+          <HireMe />
         </div>
       </main>
     </>

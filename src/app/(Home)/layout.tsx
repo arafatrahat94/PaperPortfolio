@@ -19,19 +19,24 @@ const HomeLayout = ({ children }: any) => {
       {loading && <LoadingAnimation />}
       {!loading && (
         <>
-          <AnimatedCursor
-            innerSize={8}
-            outerSize={35}
-            innerScale={1}
-            outerScale={2}
-            outerAlpha={0}
-            innerStyle={{
-              backgroundColor: theme.theme === "dark" ? "white" : "black",
-            }}
-            outerStyle={{
-              border: `3px solid ${theme.theme === "dark" ? "white" : "black"}`,
-            }}
-          />
+          <div className="max-lg:hidden">
+            {" "}
+            <AnimatedCursor
+              innerSize={8}
+              outerSize={35}
+              innerScale={1}
+              outerScale={2}
+              outerAlpha={0}
+              innerStyle={{
+                backgroundColor: theme.theme === "dark" ? "white" : "black",
+              }}
+              outerStyle={{
+                border: `3px solid ${
+                  theme.theme === "dark" ? "white" : "black"
+                }`,
+              }}
+            />
+          </div>
           <NavBar />
           {children}
         </>
