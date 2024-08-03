@@ -4,6 +4,7 @@ import {
   FaGithub,
   FaInstagram,
   FaLinkedinIn,
+  FaRegEye,
   FaWhatsapp,
 } from "react-icons/fa";
 import { LuMailPlus } from "react-icons/lu";
@@ -35,14 +36,43 @@ const Hero = () => {
                 <span className="font-bold strokeText">Arafath</span> Hossain
               </span>
             </div>
-            <div className="max-lg:w-full max-md:text-2xl  w-[769px] dark:text-dark-primary-color text-[#333333] text-[40px] font-normal font-Rubik">
-              A web developer & with front‑end & back-end skills.
+            <div className="relative">
+              <div className="max-lg:w-full max-md:text-2xl  w-[769px] dark:text-dark-primary-color text-[#333333] text-[40px] font-normal font-Rubik">
+                A web developer & with front‑end & back-end skills.
+              </div>
+
+              <button className="absolute top-16 xl:flex hidden left-80  items-center px-6 py-3 overflow-hidden font-medium transition-all bg-light-primary-color rounded-md group">
+                <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-light-secondary-color rounded group-hover:-mr-4 group-hover:-mt-4">
+                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                </span>
+                <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-light-secondary-color rounded group-hover:-ml-4 group-hover:-mb-4">
+                  <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+                </span>
+                <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-light-primary-color rounded-md group-hover:translate-x-0"></span>
+                <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out flex items-center gap-x-1 group-hover:text-white">
+                  <FaRegEye />
+                  Resume
+                </span>
+              </button>
             </div>
             <div className="max-lg:w-full max-md:text-sm w-[769px] dark:text-dark-primary-color text-[#333333] text-2xl font-normal font-Rubik">
               I focused on crafting clean & user‑friendly experiences. I am
               passionate about building excellent software that improves the
               lives of those around me.
-            </div>
+            </div>{" "}
+            <button className=" flex relative xl:hidden   items-center px-6 py-3 overflow-hidden font-medium transition-all bg-light-primary-color rounded-md group">
+              <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-light-secondary-color rounded group-hover:-mr-4 group-hover:-mt-4">
+                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+              </span>
+              <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-light-secondary-color rounded group-hover:-ml-4 group-hover:-mb-4">
+                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-dark-primary-color"></span>
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-light-primary-color rounded-md group-hover:translate-x-0"></span>
+              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out flex items-center gap-x-1 group-hover:text-white">
+                <FaRegEye />
+                Resume
+              </span>
+            </button>
           </div>
           <div className="bg-light-primary-color dark:bg-dark-primary-color  min-h-[100px] max-xl:absolute block max-lg:hidden max-lg:static lg:w-[100px] lg:h-[450px] xl:h-[100px] right-0 xl:w-[80%] max-lg:h-[100px] max-lg:w-[80%]  ms-auto p-4 me-10 mt-5">
             <div className="w-full h-full dark:border-light-primary-color/30 border-dark-primary-color/30 border max-lg:grid-cols-7 grid relative xl:grid-cols-7">

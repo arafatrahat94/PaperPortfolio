@@ -53,6 +53,13 @@
     color: #181818;
   }
 }
+html {
+  --cursor-color: #333;
+}
+
+html.dark-mode {
+  --cursor-color: #fff;
+}
 .iDpPWH {
   background-color: #efebeb !important;
 }
