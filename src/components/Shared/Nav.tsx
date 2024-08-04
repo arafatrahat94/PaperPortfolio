@@ -83,14 +83,17 @@ const Navbar = () => {
         <CustomButton className={"text-xl"} path="/">
           Hello
         </CustomButton>
-        <CustomButton className={"text-xl"} path="/GCamUpdates">
-          About
+        <CustomButton className={"text-xl w-[120px]"} path="/GCamUpdates">
+          About Me
         </CustomButton>
-        <CustomButton className={"w-[120px] text-xl"} path="/ConfigFiles">
+        <CustomButton className={"text-xl w-[120px]"} path="/GCamUpdates">
           Experience
         </CustomButton>
-        <CustomButton className={"w-[120px] text-xl"} path="/PhotoGallery">
+        <CustomButton className={"w-[120px] text-xl"} path="/ConfigFiles">
           Projects
+        </CustomButton>
+        <CustomButton className={"w-[120px] text-xl"} path="/PhotoGallery">
+          Resources
         </CustomButton>
 
         <div className="">
@@ -205,11 +208,15 @@ const Navbar = () => {
               <CustomButton className={"text-3xl "} path="/">
                 Hello
               </CustomButton>
-              <CustomButton className={"text-3xl "} path="/GCamUpdates">
-                About
+              <CustomButton className={"text-xl w-[120px]"} path="/GCamUpdates">
+                About Me
               </CustomButton>
-              <CustomButton className={"text-3xl"} path="/ConfigFiles">
+              <CustomButton className={"text-xl w-[120px]"} path="/GCamUpdates">
                 Experience
+              </CustomButton>
+
+              <CustomButton className={"text-3xl"} path="/PhotoGallery">
+                Resources
               </CustomButton>
               <CustomButton className={"text-3xl"} path="/PhotoGallery">
                 Projects

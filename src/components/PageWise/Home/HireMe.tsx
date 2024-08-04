@@ -1,8 +1,8 @@
 const HireMe = () => {
   return (
-    <div className="mt-10 mb-20">
+    <div className="mt-20 mb-20">
       {/*-> Rahat code */}
-      <div className="text-light-primary-color dark:text-dark-primary-color mb-20 text-center underline  text-[54px] font-medium max-sm:text-4xl">
+      <div className="text-light-primary-color dark:text-dark-primary-color max-lg:mb-10 mb-20 text-center underline  text-[54px] font-medium max-sm:text-4xl">
         <span className="text-light-secondary-color dark:text-dark-primary-color/60">
           Hire
         </span>{" "}

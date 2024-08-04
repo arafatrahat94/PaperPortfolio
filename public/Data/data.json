@@ -1,0 +1,221 @@
+{
+  "personalInfo": {
+    "name": "Arafath ",
+    "secondName": "Hossain",
+    "title": "A web developer & with front‑end & back-end skills.",
+    "bio": "I focused on crafting clean & user‑friendly experiences. I am passionate about building excellent software that improves the lives of those around me.",
+    "profilePicture": "https://example.com/images/profile.jpg",
+    "location": "Dr Lokman House, Imam Nagar ,Chattogram, Bangladesh"
+  },
+  "Contact": {
+    "email": "arafatrahat94@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/MdArafathHossain",
+    "github": "https://github.com/arafatrahat94",
+    "twitter": "https://twitter.com/janedoe",
+    "phoneOne": "+8801980389400",
+    "phoneTwo": "+8801571259354",
+    "whatsapp": "https://wa.me/+8801980389400",
+    "faceBook": "https://www.facebook.com/md.arafathhossainrahat/",
+    "instagram": "https://www.instagram.com/md.arafathhossainrahat/",
+    "githubUser": "arafatrahat94"
+  },
+  "skills": {
+    "FrontEndOptions": [
+      {
+        "name": "HTML",
+        "level": 3,
+        "frame": "Language"
+      },
+      {
+        "name": "CSS",
+        "level": 4,
+        "frame": "Language"
+      },
+      {
+        "name": "Tailwind",
+        "level": 3,
+        "frame": "Css Framework"
+      },
+      {
+        "name": "Bootstrap",
+        "level": 3,
+        "frame": "Css Framework"
+      },
+      {
+        "name": "DaisyUi",
+        "level": 4,
+        "frame": "Ui Library"
+      },
+      {
+        "name": "ShadCn",
+        "level": 4,
+        "frame": "Ui Library"
+      },
+      {
+        "name": "React Router",
+        "level": 4,
+        "frame": "Library"
+      },
+      {
+        "name": "Aceternity",
+        "level": 4,
+        "frame": "Motion Library"
+      },
+      {
+        "name": "JavaScript",
+        "level": 3,
+        "frame": "Language"
+      },
+      {
+        "name": "ReactJs",
+        "frame": "JavaScript Framework",
+        "level": 5
+      },
+      {
+        "name": "NextJs",
+        "level": 4,
+        "frame": "JavaScript Framework"
+      },
+      {
+        "name": "TypeScript",
+        "level": 3,
+        "frame": "Language"
+      },
+      {
+        "name": "Redux",
+        "level": 3,
+        "frame": "State Management"
+      },
+      {
+        "name": "Firebase",
+        "level": 3,
+        "frame": "Authentication Library"
+      }
+    ],
+    "BackendOptions": [
+      {
+        "name": "NodeJs",
+        "level": 2,
+        "frame": "JavaScript RunTime"
+      },
+      {
+        "name": "Express",
+        "level": 2,
+        "frame": "NodeJs Framework"
+      },
+      {
+        "name": "MongoDB",
+        "level": 3,
+        "frame": "NoSql Database"
+      },
+      {
+        "name": "JWT",
+        "level": 2,
+        "frame": "Encryption Tool"
+      }
+    ],
+    "ToolsOptions": [
+      {
+        "name": "Git",
+        "level": 3,
+        "frame": "Version Control"
+      },
+      {
+        "name": "Github",
+        "level": 4,
+        "frame": "Version Control"
+      },
+      {
+        "name": "VSCode",
+        "level": 3,
+        "frame": "Code Editor"
+      },
+      {
+        "name": "Figma",
+        "level": 4,
+        "frame": "Design Tool"
+      },
+      {
+        "name": "Vercel",
+        "level": 4,
+        "frame": "Hosting Service"
+      },
+      {
+        "name": "Netlify",
+        "level": 3,
+        "frame": "Hosting Service"
+      },
+      {
+        "name": "Postman",
+        "level": 3,
+        "frame": "Api tool"
+      },
+      {
+        "name": "Slack",
+        "level": 4,
+        "frame": "Communication"
+      },
+      {
+        "name": "Notion",
+        "level": 4,
+        "frame": "Note Taking"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Portfolio Website",
+      "description": "A personal portfolio website showcasing my skills, projects, and contact information.",
+      "role": "Frontend Developer",
+      "images": [
+        "https://example.com/images/project1.jpg",
+        "https://example.com/images/project2.jpg",
+        "https://example.com/images/project3.jpg"
+      ],
+      "technologies": ["HTML", "CSS", "JavaScript", "React"],
+      "link": "https://janedoe.dev/portfolio",
+      "projectType": "Solo"
+    },
+    {
+      "title": "E-commerce Platform",
+      "description": "A full-featured e-commerce platform with user authentication, product management, and payment integration.",
+      "technologies": ["Node.js", "Express.js", "MongoDB", "Stripe"],
+      "role": "Frontend Developer",
+      "images": [
+        "https://example.com/images/project1.jpg",
+        "https://example.com/images/project2.jpg",
+        "https://example.com/images/project3.jpg"
+      ],
+      "link": "https://example.com/ecommerce",
+      "projectType": "Solo"
+    },
+    {
+      "title": "Blog Application",
+      "description": "A blog application that allows users to create, edit, and comment on posts.",
+      "role": "Frontend Developer",
+      "images": [
+        "https://example.com/images/project1.jpg",
+        "https://example.com/images/project2.jpg",
+        "https://example.com/images/project3.jpg"
+      ],
+      "technologies": ["Python", "Django", "PostgreSQL"],
+      "link": "https://example.com/blog",
+      "projectType": "Solo"
+    }
+  ],
+  "resourses": [
+    {
+      "name": "Github",
+      "link": "https://github.com/janedoe"
+    },
+    {
+      "name": "LinkedIn",
+      "link": "https://linkedin.com/in/janedoe"
+    },
+    {
+      "name": "Twitter",
+      "link": "https://twitter.com/janedoe"
+    }
+  ],
+  "about": ""
+}
