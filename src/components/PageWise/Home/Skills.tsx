@@ -184,7 +184,7 @@ const MySkills = () => {
                 className="grid md:grid-cols-3 lg:grid-cols-4 max-w-[940px] grid-cols-2 mx-auto pb-10 gap-x-4  gap-y-8 mt-14"
               >
                 {FrontEnd &&
-                  FrontEndOptions.map((x, i) => (
+                  FrontEndOptions?.map((x: any, i: any) => (
                     <>
                       <div className="relative  mx-auto ">
                         <div className="w-[40px] rounded-xl  rotate-45 dark:bg-light-primary-color bg-dark-primary-color outline-light-primary-color dark:outline-dark-primary-color outline  p-px lg:scale-100 scale-90 h-[40px] -left-2 -top-[19px] lg:left-2  z-20 flex items-center justify-center   absolute ">
@@ -256,7 +256,7 @@ const MySkills = () => {
                     </>
                   ))}
                 {Tools &&
-                  ToolsOptions.map((x, i) => (
+                  ToolsOptions?.map((x: any, i: any) => (
                     <>
                       <div className="relative">
                         <div className="w-[40px] rounded-xl  rotate-45 dark:bg-light-primary-color bg-dark-primary-color outline-light-primary-color dark:outline-dark-primary-color outline  p-px lg:scale-100 scale-90 h-[40px] -left-2 -top-[19px] lg:left-2  z-20 flex items-center justify-center   absolute ">
@@ -313,7 +313,7 @@ const MySkills = () => {
                     </>
                   ))}
                 {Backend &&
-                  BackendOptions.map((x, i) => (
+                  BackendOptions?.map((x: any, i: any) => (
                     <>
                       <div className="relative">
                         <div className="w-[40px] rounded-xl  rotate-45 dark:bg-light-primary-color bg-dark-primary-color outline-light-primary-color dark:outline-dark-primary-color outline  p-px lg:scale-100 scale-90 h-[40px] -left-2 -top-[19px] lg:left-2  z-20 flex items-center justify-center   absolute ">
