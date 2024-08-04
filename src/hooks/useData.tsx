@@ -8,6 +8,7 @@ interface UseDataResponse {
   skills: any;
   BackendOptions: any;
   ToolsOptions: any;
+  Projects: any;
 }
 const useData = (): UseDataResponse => {
   const [data, setData] = useState<Data | null>(null);
@@ -15,6 +16,7 @@ const useData = (): UseDataResponse => {
   const FrontEndOptions = data?.skills?.FrontEndOptions;
   const BackendOptions = data?.skills?.BackendOptions;
   const ToolsOptions = data?.skills?.ToolsOptions;
+  const Projects = data?.Projects;
   const [PersonalInfo, setPersonalInfo] = useState<PersonalInfo | null>(null);
   const [Contact, setContact] = useState<ContactInfo | null>(null);
   useEffect(() => {
@@ -39,6 +41,7 @@ const useData = (): UseDataResponse => {
     FrontEndOptions,
     ToolsOptions,
     BackendOptions,
+    Projects,
   };
 };
 
@@ -47,6 +50,7 @@ interface Data {
   Contact: ContactInfo;
   skills: any;
   FrontEndOptions: any;
+  Projects: any;
   // Add other properties as needed
 }
 
@@ -59,6 +63,7 @@ interface PersonalInfo {
   location: string;
 }
 
+interface Projects {}
 interface ContactInfo {
   email: string;
   linkedin: string;

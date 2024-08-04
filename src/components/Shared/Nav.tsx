@@ -2,6 +2,8 @@
 import CustomButton from "@/components/ui/CustomButton/CustomButton";
 import { useTheme } from "next-themes";
 import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
@@ -47,11 +49,11 @@ const Navbar = () => {
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
   };
-
+  const pathname = usePathname();
   return (
     <div className="flex relative bg-black-100 justify-between w-full items-center overflow-hidden mx-auto sm:p-5 p-5 h-[75px] ">
       {/*-> Rahat code */}
-      <div className="max-md:scale-90  flex dark:hidden max-md:-ms-4">
+      <Link href="/" className="max-md:scale-90  flex dark:hidden max-md:-ms-4">
         <Image
           src={logo}
           className="h-[60px] w-fit"
@@ -59,13 +61,13 @@ const Navbar = () => {
           width={500}
           height={500}
         />
-        <h1 className="relative bg-red-500  text-3xl">
+        <h1 className="relative   text-3xl">
           <span className="bottom-0 absolute h-fit dark:text-dark-primary-color text-light-primary-color ">
             Arafath
           </span>
         </h1>
-      </div>
-      <div className="max-md:scale-90  dark:flex hidden max-md:-ms-4">
+      </Link>
+      <Link href="/" className="max-md:scale-90  dark:flex hidden max-md:-ms-4">
         <Image
           src={darklogo}
           className="h-[60px] w-fit"
@@ -73,12 +75,12 @@ const Navbar = () => {
           width={500}
           height={500}
         />
-        <h1 className="relative bg-red-500  text-3xl">
+        <h1 className="relative   text-3xl">
           <span className="bottom-0 absolute h-fit dark:text-dark-primary-color text-light-primary-color ">
             Arafath
           </span>
         </h1>
-      </div>
+      </Link>
       <div className=" max-xl:hidden gap-x-10 justify-between flex items-center h-full">
         <CustomButton className={"text-xl"} path="/">
           Hello
@@ -89,10 +91,13 @@ const Navbar = () => {
         <CustomButton className={"text-xl w-[120px]"} path="/GCamUpdates">
           Experience
         </CustomButton>
-        <CustomButton className={"w-[120px] text-xl"} path="/ConfigFiles">
+        <CustomButton
+          className={"w-[120px] text-xl"}
+          path={pathname === "/" ? "#Projects" : "/Projects"}
+        >
           Projects
         </CustomButton>
-        <CustomButton className={"w-[120px] text-xl"} path="/PhotoGallery">
+        <CustomButton className={"w-[120px] text-xl"} path="/Resources">
           Resources
         </CustomButton>
 
@@ -204,21 +209,30 @@ const Navbar = () => {
               </div>
             </div>
 
-            <div className="h-[500px] mt-10 z-50 relative flex flex-col">
+            <div className="h-[400px] mt-10 z-50 relative flex flex-col">
               <CustomButton className={"text-3xl "} path="/">
                 Hello
               </CustomButton>
-              <CustomButton className={"text-xl w-[120px]"} path="/GCamUpdates">
+              <CustomButton
+                className={"text-3xl mx-auto w-[200px]"}
+                path="/GCamUpdates"
+              >
                 About Me
               </CustomButton>
-              <CustomButton className={"text-xl w-[120px]"} path="/GCamUpdates">
+              <CustomButton
+                className={"text-3xl mx-auto w-[200px]"}
+                path="/GCamUpdates"
+              >
                 Experience
               </CustomButton>
 
-              <CustomButton className={"text-3xl"} path="/PhotoGallery">
+              <CustomButton className={"text-3xl"} path="/Resources">
                 Resources
               </CustomButton>
-              <CustomButton className={"text-3xl"} path="/PhotoGallery">
+              <CustomButton
+                className={"text-3xl"}
+                path={pathname === "/" ? "#Projects" : "/Projects"}
+              >
                 Projects
               </CustomButton>
             </div>

@@ -162,7 +162,7 @@
       }
     ]
   },
-  "projects": [
+  "Projects": [
     {
       "title": "Portfolio Website",
       "description": "A personal portfolio website showcasing my skills, projects, and contact information.",
@@ -174,7 +174,8 @@
       ],
       "technologies": ["HTML", "CSS", "JavaScript", "React"],
       "link": "https://janedoe.dev/portfolio",
-      "projectType": "Solo"
+      "projectType": "Solo",
+      "techStack": "ReactJs"
     },
     {
       "title": "E-commerce Platform",
@@ -187,7 +188,8 @@
         "https://example.com/images/project3.jpg"
       ],
       "link": "https://example.com/ecommerce",
-      "projectType": "Solo"
+      "projectType": "Solo",
+      "techStack": "ReactJs"
     },
     {
       "title": "Blog Application",
@@ -200,7 +202,8 @@
       ],
       "technologies": ["Python", "Django", "PostgreSQL"],
       "link": "https://example.com/blog",
-      "projectType": "Solo"
+      "projectType": "Solo",
+      "techStack": "NextJs"
     }
   ],
   "resourses": [
