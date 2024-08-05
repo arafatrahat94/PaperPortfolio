@@ -6,7 +6,7 @@ import {
 } from "@/components/ui/Carousal/Carousal";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
 import { RiNextjsLine, RiReactjsLine } from "react-icons/ri";
 
@@ -28,6 +28,17 @@ const ProjectsCard = ({ index, datas }: any) => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
   }, [api]);
+  const [newHeight, setHeight] = React.useState(0 as number);
+  useEffect(() => {
+    const contentElement = document.getElementById("content");
+    if (contentElement && window.innerWidth > 768) {
+      const newHeight = contentElement.offsetHeight;
+      console.log("Content Height:", newHeight); // Ensure this logs a valid height
+      setHeight(newHeight);
+    } else {
+      setHeight(document.getElementById("content2")?.offsetHeight as number);
+    }
+  }, [window.innerWidth]);
 
   return (
     <div className="my-10">
@@ -41,20 +52,22 @@ const ProjectsCard = ({ index, datas }: any) => {
           } w-full h-full min-h-[292px]   flex-grow `}
         >
           <Carousel
+            id="content2"
             setApi={setApi}
-            className="w-full  p-1 flex items-center h-full"
+            className="w-full  flex items-center h-full"
           >
-            <CarouselContent className="w-full h-full">
+            <CarouselContent className="w-full h-full object-cover bg-black">
               {datas?.images?.map((item: any, index: number) => (
                 <CarouselItem
-                  className="w-full object-cover h-[300px]"
+                  style={{ height: newHeight }}
+                  className={`w-full  max-md:h-full object-cover `}
                   key={index}
                 >
                   <Image
                     src={item}
                     alt=""
-                    width={500}
-                    height={500}
+                    width={1000}
+                    height={1000}
                     loading="lazy"
                     className="w-full h-full object-cover"
                   />
@@ -64,6 +77,7 @@ const ProjectsCard = ({ index, datas }: any) => {
           </Carousel>
         </div>
         <div
+          id="content"
           className={`${
             index % 2 === 0 ? "md:order-2" : "md:order-1"
           } relative col-span-2 max-md:p-5 border dark:border-dark-primary-color/5 border-light-primary-color/5 p-10 w-full  h-full`}
@@ -103,7 +117,7 @@ const ProjectsCard = ({ index, datas }: any) => {
           <p className="font-Space">{datas?.description}</p>
           <div className="h-[50px] text-3xl items-center flex justify-between mt-5  relative -bottom-5 -right-5 max-md:right-0 max-md:-bottom-2  flex-grow flex-1  ">
             <div className="py-2 -ml-5 max-md:ml-0 text-center text-sm text-muted-foreground">
-              Picture {current} of {count}
+              Github repo - {datas?.githubRepo[0]}
             </div>
             <Link href={datas?.link} target="_blank" rel="noopener noreferrer">
               <FaExternalLinkSquareAlt />
