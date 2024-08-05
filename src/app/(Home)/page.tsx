@@ -1,5 +1,6 @@
 "use client";
 
+import AboutUs from "@/components/PageWise/Home/AboutUs";
 import Hero from "@/components/PageWise/Home/Hero";
 import HireMe from "@/components/PageWise/Home/HireMe";
 import Projects from "@/components/PageWise/Home/Projects";
@@ -20,6 +21,7 @@ export default function Home() {
           <Projects />
           <MySkills />
           <Stats />
+          <AboutUs />
           <HireMe />
         </div>
       </main>

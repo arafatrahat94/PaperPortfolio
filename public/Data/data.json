@@ -164,29 +164,37 @@
   },
   "Projects": [
     {
-      "title": "Portfolio Website",
-      "description": "A personal portfolio website showcasing my skills, projects, and contact information.",
+      "title": "Agency Website",
+      "description": " MSI Prompt, a dedicated website to driving client's business forward through innovative digital solutions. Their expertise spans across key areas such as cryptocurrency consulting, cutting-edge digital marketing strategies, and targeted Facebook advertising campaigns. The website aims to elevate their brand presence and attract new clients.",
       "role": "Frontend Developer",
       "images": [
-        "https://example.com/images/project1.jpg",
-        "https://example.com/images/project2.jpg",
-        "https://example.com/images/project3.jpg"
+        "https://i.ibb.co/j4rD2sZ/Screenshot-2024-08-05-194758.png",
+        "https://i.ibb.co/SBPcwY8/Screenshot-2024-08-05-194903.png",
+        "https://i.ibb.co/5xPhrQf/Screenshot-2024-08-05-194939.png",
+        "https://i.ibb.co/LhGmvdW/Screenshot-2024-08-05-195044.png",
+        "https://i.ibb.co/pQv098c/Screenshot-2024-08-05-195115.png"
       ],
-      "technologies": ["HTML", "CSS", "JavaScript", "React"],
-      "link": "https://janedoe.dev/portfolio",
-      "projectType": "Solo",
-      "techStack": "ReactJs"
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React Dom",
+        "React hook form",
+        "NextJs",
+        "Tailwind",
+        "React icons",
+        "Shad Cn"
+      ],
+      "link": "https://www.msipromot.com/",
+      "projectType": "Solo | Client",
+      "techStack": "NextJs"
     },
     {
       "title": "E-commerce Platform",
       "description": "A full-featured e-commerce platform with user authentication, product management, and payment integration.",
       "technologies": ["Node.js", "Express.js", "MongoDB", "Stripe"],
       "role": "Frontend Developer",
-      "images": [
-        "https://example.com/images/project1.jpg",
-        "https://example.com/images/project2.jpg",
-        "https://example.com/images/project3.jpg"
-      ],
+      "images": [],
       "link": "https://example.com/ecommerce",
       "projectType": "Solo",
       "techStack": "ReactJs"
@@ -195,11 +203,7 @@
       "title": "Blog Application",
       "description": "A blog application that allows users to create, edit, and comment on posts.",
       "role": "Frontend Developer",
-      "images": [
-        "https://example.com/images/project1.jpg",
-        "https://example.com/images/project2.jpg",
-        "https://example.com/images/project3.jpg"
-      ],
+      "images": [],
       "technologies": ["Python", "Django", "PostgreSQL"],
       "link": "https://example.com/blog",
       "projectType": "Solo",

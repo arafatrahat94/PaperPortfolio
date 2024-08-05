@@ -4,6 +4,7 @@ import {
   CarouselContent,
   CarouselItem,
 } from "@/components/ui/Carousal/Carousal";
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaExternalLinkSquareAlt } from "react-icons/fa";
@@ -20,7 +21,7 @@ const ProjectsCard = ({ index, datas }: any) => {
       return;
     }
 
-    setCount(api.scrollSnapList().length);
+    setCount(datas?.images?.length);
     setCurrent(api.selectedScrollSnap() + 1);
 
     api.on("select", () => {
@@ -41,12 +42,22 @@ const ProjectsCard = ({ index, datas }: any) => {
         >
           <Carousel
             setApi={setApi}
-            className="w-full bg-light-primary-color h-full"
+            className="w-full  p-1 flex items-center h-full"
           >
-            <CarouselContent className="w-full  h-full">
-              {Array.from({ length: 5 }).map((_, index) => (
-                <CarouselItem className="w-full  h-full" key={index}>
-                  <span className="text-4xl font-semibold">{index + 1}</span>
+            <CarouselContent className="w-full h-full">
+              {datas?.images?.map((item: any, index: number) => (
+                <CarouselItem
+                  className="w-full object-cover h-[300px]"
+                  key={index}
+                >
+                  <Image
+                    src={item}
+                    alt=""
+                    width={500}
+                    height={500}
+                    loading="lazy"
+                    className="w-full h-full object-cover"
+                  />
                 </CarouselItem>
               ))}
             </CarouselContent>

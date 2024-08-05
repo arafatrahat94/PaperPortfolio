@@ -12,7 +12,7 @@ import {
 import { LuMailPlus } from "react-icons/lu";
 import { TbBorderCornerSquare } from "react-icons/tb";
 import { VscCallOutgoing } from "react-icons/vsc";
-import hero from "../../../assets/svg/Hero.svg";
+import hero from "../../../assets/svg/Hero.webp";
 import "./Hero.css";
 
 const Hero = () => {
