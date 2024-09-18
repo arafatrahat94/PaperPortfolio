@@ -14,7 +14,7 @@ const Projects = () => {
       </h1>
       {data?.length > 0 &&
         data
-          ?.slice(0, 3)
+          ?.slice(0, 5)
           .map((item: any, i: any) => (
             <ProjectsCard index={i} datas={item} key={i} />
           ))}

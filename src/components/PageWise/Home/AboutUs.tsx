@@ -2,7 +2,7 @@ import Image from "next/image";
 import img from "../../../assets/svg/aboutUs.png";
 const AboutUs = () => {
   return (
-    <div className="relative my-20">
+    <div id="AboutMe" className="relative my-20">
       <h1 className="text-5xl text-light-primary-color dark:text-dark-primary-color text-center underline mb-10 font-bold tracking-wide">
         About Me
       </h1>

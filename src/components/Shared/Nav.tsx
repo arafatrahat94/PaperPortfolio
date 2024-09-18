@@ -85,10 +85,10 @@ const Navbar = () => {
         <CustomButton className={"text-xl"} path="/">
           Hello
         </CustomButton>
-        <CustomButton className={"text-xl w-[120px]"} path="/GCamUpdates">
+        <CustomButton className={"text-xl w-[120px]"} path="#AboutMe">
           About Me
         </CustomButton>
-        <CustomButton className={"text-xl w-[120px]"} path="/GCamUpdates">
+        <CustomButton className={"text-xl w-[120px]"} path="#AboutMe">
           Experience
         </CustomButton>
         <CustomButton
@@ -215,13 +215,13 @@ const Navbar = () => {
               </CustomButton>
               <CustomButton
                 className={"text-3xl mx-auto w-[200px]"}
-                path="/GCamUpdates"
+                path="#AboutMe"
               >
                 About Me
               </CustomButton>
               <CustomButton
                 className={"text-3xl mx-auto w-[200px]"}
-                path="/GCamUpdates"
+                path="#AboutMe"
               >
                 Experience
               </CustomButton>

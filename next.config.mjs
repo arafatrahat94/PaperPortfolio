@@ -1,4 +1,3 @@
-// next.config.mjs
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
@@ -11,7 +10,13 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "i.ibb.co",
+        hostname: "i.ibb.co", // Ensure this line is correct
+        port: "",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "i.ibb.co.com", // Ensure this line is correct
         port: "",
         pathname: "**",
       },

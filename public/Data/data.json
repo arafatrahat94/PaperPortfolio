@@ -164,6 +164,31 @@
   },
   "Projects": [
     {
+      "title": "Code Ripple",
+      "description": "Code Ripple isn't just another code editor; it's a dynamic and collaborative environment tailored specifically for building, testing, and discovering front-end code.It supports wide range or code language to test with modern minimal look and feel.",
+      "technologies": [
+        "Code Mirror",
+        "Monaco Editor",
+        "Shad Cn",
+        "Redux Toolkit",
+        "React Star Rating",
+        "Axios",
+        "React File Saver",
+        "Firebase",
+        "Framer motion",
+        "Gsap",
+        "Lodash",
+        "Lottie React",
+        "Lucide React"
+      ],
+      "images": ["https://i.ibb.co/dPnXbRw/property-Card-Iamge.png"],
+      "link": "https://coderipple.vercel.app/",
+      "projectType": "Product | Own",
+      "techStack": "NextJs",
+      "githubRepo": ["Private"],
+      "role": "Full Stack Developer"
+    },
+    {
       "title": "Ukiyo",
       "description": "Ukiyo is a property booking system website for global and India-based customers. Users can book properties from any state, with availability in cities like Goa, Maharashtra, Hyderabad, Mumbai, and many more. We used MERN Stack technologies to build this complex and feature-rich website.Users can book properties directly through the website.Integrated payment systems for seamless booking.Integration with Ical for booking management.Advanced search, filter, and sorting functionalities.",
       "technologies": [
@@ -179,19 +204,22 @@
         "Swiper",
         "React-webcam",
         "Express js",
-        "Mongodb"
+        "Mongodb",
+        "Rajor Pay"
       ],
       "images": ["https://i.ibb.co/dPnXbRw/property-Card-Iamge.png"],
-      "link": "https://web.ukiyostays.com/",
+      "link": "https://ukiyostays.com/",
       "projectType": "Team | Office",
       "techStack": "ReactJs",
-      "githubRepo": ["Private"]
+      "githubRepo": ["Private"],
+      "role": "Frontend Developer"
     },
     {
       "title": "Agency Website",
       "description": " MSI Prompt, a dedicated website to driving client's business forward through innovative digital solutions. Their expertise spans across key areas such as cryptocurrency consulting, cutting-edge digital marketing strategies, and targeted Facebook advertising campaigns. The website aims to elevate their brand presence and attract new clients.",
       "role": "Frontend Developer",
       "images": ["https://i.ibb.co/j4rD2sZ/Screenshot-2024-08-05-194758.png"],
+
       "technologies": [
         "HTML",
         "CSS",
@@ -210,14 +238,31 @@
     },
 
     {
-      "title": "Blog Application",
-      "description": "A blog application that allows users to create, edit, and comment on posts.",
-      "role": "Frontend Developer",
-      "images": [],
-      "technologies": ["Python", "Django", "PostgreSQL"],
-      "link": "https://example.com/blog",
-      "projectType": "Solo",
-      "techStack": "NextJs",
+      "title": "Doc House",
+      "description": "Doc House is a Vite project based on React.js for Medical Appointment Scheduling. Public path explores features; private path grants post-login access to personal meeting details. MongoDB serves as the database for meetings and user data",
+      "role": "Full Stack Developer",
+      "images": ["https://i.ibb.co.com/DkWDVHd/image.png"],
+      "technologies": [
+        "Express.js",
+        "Node.js",
+        "Firebase",
+        "Axios",
+        "Moment",
+        "Tailwind-CSS",
+        "Daisy-UI",
+        "React-router-dom",
+        "React-Photo-View",
+        "Swiper",
+        "React-Tabs",
+        "Sweet-Alert2",
+        "React-day-picker",
+        "Aos",
+        "Lottie-react",
+        "React-icons"
+      ],
+      "link": "https://doc-house-xi.vercel.app/",
+      "projectType": "Solo | Client",
+      "techStack": "ReactJs",
       "githubRepo": ["Private"]
     }
   ],

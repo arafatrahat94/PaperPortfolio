@@ -2,10 +2,12 @@
 import NavBar from "@/components/Shared/Nav";
 import LoadingAnimation from "@/components/ui/loadingAnimation/loading";
 import { useTheme } from "next-themes";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
 const HomeLayout = ({ children }: any) => {
   const [loading, setLoading] = useState(true);
+  const pathName = usePathname();
   const theme = useTheme();
   console.log(theme);
   useEffect(() => {
@@ -18,7 +20,8 @@ const HomeLayout = ({ children }: any) => {
       {loading && <LoadingAnimation />}
       {!loading && (
         <>
-          <NavBar />
+          {pathName !== "/Resume" && <NavBar />}
+
           {children}
         </>
       )}
