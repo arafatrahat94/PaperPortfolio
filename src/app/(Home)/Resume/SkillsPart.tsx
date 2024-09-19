@@ -30,7 +30,7 @@ const SkillsPart = () => {
         </div>
         <div>
           <p className="text-justify font-Space dark:text-dark-primary-color tracking-wider text-light-primary-color text-xs lg:text-base mb-1">
-            Node.js, Express.js, MongoDB (Mongoose), RESTful APIs, JWT
+            Node.js, Express.js, MongoDB (Mongoose), RESTful APIs, JWT,My Sql
           </p>
         </div>
       </div>
