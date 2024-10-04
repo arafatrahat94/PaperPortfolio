@@ -12,7 +12,7 @@ const ExperiencePart = () => {
           MERN Stack Developer <br />
         </h1>
         <h1 className="font-bold my-5 w-fit dark:bg-dark-primary-color bg-light-primary-color px-2 text-dark-primary-color tracking-wider dark:text-light-primary-color">
-          Aprill 2024 - Present
+          Aprill 2024 - October 2024
         </h1>
       </div>
       <div className="-mt-4 dark:text-dark-primary-color tracking-wider font-Space text-light-primary-color">

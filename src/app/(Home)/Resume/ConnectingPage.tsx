@@ -46,7 +46,7 @@ const ConnectingResume = () => {
             className="font-semibold text-primary-color  rounded-r-full sm:rounded-full border-2 border-r-[2px] sm:border-2 border-light-primary-color  dark:border-dark-primary-color text-light-primary-color dark:text-dark-primary-color duration-200"
             target="_blank"
             download="ArafathHossainResume"
-            href="https://drive.usercontent.google.com/u/0/uc?id=1Z1v98dAO8k41u2LTguxqhxKJbSg2Tgbq&export=download"
+            href="https://drive.usercontent.google.com/u/0/uc?id=1byQJA6I0kTy7agzfj8V7j5cUmMzFlvNn&export=download"
           >
             <button
               type="button"

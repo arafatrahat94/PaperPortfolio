@@ -181,7 +181,9 @@
         "Lottie React",
         "Lucide React"
       ],
-      "images": ["https://i.ibb.co/dPnXbRw/property-Card-Iamge.png"],
+      "images": [
+        "https://i.ibb.co.com/PDJNxHT/Screenshot-2024-10-04-164251.png"
+      ],
       "link": "https://coderipple.vercel.app/",
       "projectType": "Product | Own",
       "techStack": "NextJs",
