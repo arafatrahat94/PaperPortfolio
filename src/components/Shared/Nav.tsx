@@ -51,7 +51,7 @@ const Navbar = () => {
   };
   const pathname = usePathname();
   return (
-    <div className="flex relative bg-black-100 justify-between w-full items-center overflow-hidden mx-auto sm:p-5 p-5 h-[75px] ">
+    <div className="flex backdrop:blur-md z-50 bg-[#efebeb] dark:bg-[#131619] justify-between sticky top-0 w-full items-center overflow-hidden mx-auto sm:p-5 p-5 h-[75px] ">
       {/*-> Rahat code */}
       <Link href="/" className="max-md:scale-90  flex dark:hidden max-md:-ms-4">
         <Image
@@ -83,7 +83,9 @@ const Navbar = () => {
       </Link>
       <div className=" max-xl:hidden gap-x-10 justify-between flex items-center h-full">
         <CustomButton className={"text-xl"} path="/">
-          Hello
+          {
+            pathname === "/" ? "Hello" : "Home"
+          }
         </CustomButton>
         <CustomButton className={"text-xl w-[120px]"} path="#AboutMe">
           About Me
@@ -97,9 +99,7 @@ const Navbar = () => {
         >
           Projects
         </CustomButton>
-        <CustomButton className={"w-[120px] text-xl"} path="/Resources">
-          Resources
-        </CustomButton>
+
 
         <div className="">
           <label className="switch">
@@ -154,15 +154,13 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`${
-          isOpen2 ? "h-screen w-screen opacity-100 " : "opacity-0"
-        } fixed z-50 overflow-hidden top-0 left-0 bg-black/90`}
+        className={`${isOpen2 ? "h-screen w-screen opacity-100 " : "opacity-0"
+          } fixed z-50 overflow-hidden top-0 left-0 bg-black/90`}
       >
         <div
           ref={divRef}
-          className={`${
-            isOpen ? "top-0" : "-top-[120%]"
-          } absolute transform duration-700 bg-background w-full border-s-2  p-4 border-[#575757] h-full`}
+          className={`${isOpen ? "top-0" : "-top-[120%]"
+            } absolute transform duration-700 bg-background w-full border-s-2  p-4 border-[#575757] h-full`}
         >
           <div className="w-full flex justify-center z-50 min-h-screen flex-col h-full ">
             <div
